@@ -2,7 +2,6 @@ const fs = require('fs').promises;
 const got = require('got');
 const SVGO = require('svgo');
 const ora = require('ora');
-const svgoOptions = require('./svgo-options.json');
 
 const generateSvg = async (imageData, svgo, dist, callback) => {
 	try {
@@ -63,7 +62,7 @@ module.exports = async options => {
 		// Download the SVG files
 		const imageIds = Object.keys(imageData);
 
-		const svgo = options.raw ? null : new SVGO({svgoOptions});
+		const svgo = options.raw ? null : new SVGO();
 		const svgTasks = imageIds.map(id => generateSvg(
 			imageData[id],
 			svgo,

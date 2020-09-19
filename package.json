@@ -1,6 +1,6 @@
 {
 	"name": "figma-svg-cli",
-	"version": "0.0.0-alpha.1",
+	"version": "0.0.0-alpha.2",
 	"description": "Export Figma frames as minified SVG files",
 	"main": "index.js",
 	"scripts": {
